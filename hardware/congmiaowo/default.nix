@@ -21,6 +21,29 @@
       efiSysMountPoint = "/boot";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    kitty
+    git
+    vscode.fhs
+    firefox
+    alejandra
+    nil
+    direnv
+    perl
+    gnumake
+  ];
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+  services.displayManager.sddm = {
+    enable = false;
+    wayland.enable = true;
+  };
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.networkmanager.enable = true;
 }

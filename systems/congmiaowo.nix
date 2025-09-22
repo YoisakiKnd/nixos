@@ -16,9 +16,7 @@
       "core/input"
 
       "desktop/peripherals"
-
-      "home/home"
-
+      
       # "services/kmscon"
     ];
   };
