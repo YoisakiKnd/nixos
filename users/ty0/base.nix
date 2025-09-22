@@ -14,7 +14,7 @@ in {
 
   userConfig = {
     userName = userName;
-    homeManagerModules = [
+    homeModules = [
       "home/home"
     ];
   };
